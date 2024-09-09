@@ -1,0 +1,224 @@
+body {
+    /* <img src="example.jpg" alt="Example Image"> */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+  }
+
+  /* Navbar Styles */
+.navbar {
+    background-color: #4CAF50;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.navbar .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-image: url('doctor-hero.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 4rem 2rem;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.hero .cta-button {
+    padding: 0.75rem 1.5rem;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.hero .cta-button:hover {
+    background-color: #45a049;
+}
+
+  form {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #45a049;
+    border-radius: 10px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  select,
+  input[type="date"],
+  input[type="time"],
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  
+  button {
+    background: #4caf50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    width: 300px;
+  }
+  
+  button:hover {
+    background: #45a049;
+    box-shadow: 2px 2px 2px green;
+    border: 1px solid black;
+  }
+  
+  #confirmationMessage {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .booking-section h2 {
+      margin-bottom: 1.5rem;
+      color: #4CAF50;
+      text-align: center;
+  }
+  
+  .booking-form label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+  }
+  
+  .booking-form input,
+  .booking-form select {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      width: 290px;
+  }
+  
+  .booking-form button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+  }
+  
+  .booking-form button:hover {
+      background-color: #45a049;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
+}
+
+  /* Smartphones (Portrait) */
+@media (max-width: 480px) {
+  .navbar {
+      flex-direction: column;
+  }
+
+  .nav-links {
+      text-align: center;
+  }
+
+  .nav-links li {
+      display: block;
+      margin: 10px 0;
+  }
+
+  .hero {
+      padding: 40px 20px;
+  }
+
+  .hero h1 {
+      font-size: 1.5em;
+  }
+
+  .hero p {
+      font-size: 0.9em;
+  }
+
+  .cta-button {
+      padding: 8px 16px;
+  }
+
+  .service-cards {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .service-card {
+      width: 95%;
+  }
+
+  .categories {
+      flex-direction: column;
+      align-items: center;
+  }
+}
+

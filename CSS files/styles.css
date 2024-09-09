@@ -1,0 +1,90 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: rgb(88, 187, 207);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.navbar{
+    display: grid;
+    grid-area: header;
+    grid-column: span;
+    
+}
+
+.login-container {
+    background-color: #3472b5;
+    height: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 5%;
+    border-radius: 5px;
+    box-shadow: 0 0 0 10px rgba(50, 0, 0, 0.1);
+}
+
+.login-container:hover {
+    background-color: rgb(22, 108, 178);
+}
+
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    color: rgb(252, 244, 244);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#errorMessage {
+    color: red;
+    margin-top: 10px;
+}
+
+a {
+    color: white;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .login-container {
+        width: 50%;
+        padding: 3%;
+    }
+}
+
+@media (min-width: 1024px) {
+    .login-container {
+        width: 25%;
+        padding: 2%;
+    }
+}

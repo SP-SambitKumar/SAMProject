@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Appointment</title>
+  <link rel="stylesheet" href="../CSS files/interface.css">
+</head>
+<body>
+   <!-- Navigation Bar -->
+   <header>
+    <nav class="navbar">
+        <div class="logo">Online Doctor Appointment Booking </div>
+        <ul class="nav-links">
+            <li><a href="../HTML files/Home.html">Home</a></li>
+            <li><a href="../HTML files/Doctors.html">Doctors</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="../HTML files/contact.html">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+        <h1>Book Your Doctor's Appointment Online</h1>
+        <p>Convenient and easy access to healthcare. Find the right doctor and book your appointment with a few clicks.</p>
+        <a href="/SAMProject/HTML files/Booking_interface.html" class="cta-button">Book Now</a>
+    </div>
+</section>
+  <section id="booking" class="booking-section">
+    <h2><marquee>Book an Appointment</marquee></h2>
+    <form class="booking-form">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Full Name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Your Phone Number" required>
+
+        <label for="doctor">Select Doctor:</label>
+        <select id="doctor" name="doctor" required>
+            <option value="">-- Choose Doctor --</option>
+            <option value="dr-smith">Dr. John Smith</option>
+            <option value="dr-jones">Dr. Sarah Jones</option>
+            <option value="dr-wilson">Dr. Mike Wilson</option>
+        </select>
+
+        <label for="date">Preferred Date:</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="time">Preferred Time:</label>
+        <input type="time" id="time" name="time" required>
+
+        <button type="submit" class="submit-button">Book Appointment</button>
+    </form>
+</section>
+
+<footer>
+  <p>&copy; 2024 DoctorApp. All rights reserved.</p>
+</footer>
+</body>
+</html>
