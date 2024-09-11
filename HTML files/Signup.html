@@ -11,15 +11,20 @@
         <h2 style="text-align: center;">REGISTER</h2>
         <form id="signup" >
             <label for="Name">Name:</label>
-            <input type="text" id="Name" name="Name" required><br>
+            <input type="text" id="Name" name="Name" required placeholder="Name"><br>
             <label for="email">Email:</label>
-            <input type="email" name="" id=""><br>
+            <input type="email" name="" id="" placeholder="E-mail"><br>
             <label for="cemail">Confirm-Email:</label>
-            <input type="email" name="" id=""><br>
+            <input type="email" name="" id="" placeholder="Confirm E-mail"><br>
+            <!-- Username: only alphabets are allowed -->
+        <label for="username">Username (Only alphnumeric) letters:</label>
+        <input type="text" id="username" name="username" placeholder="Enter username"
+            pattern="[A-Za-z]+[0-9]+" title="Username should only contain alphnumeric letters" required>
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required><br>
+            <input type="password" id="password" name="password" required placeholder="Password"><br>
             <label for="confirm-password">Confirm-Password:</label>
-            <input type="password" id="c_password" name="c_password" required><br>
+            <input type="password" id="c_password" name="c_password" required placeholder="Confirm Password"><br>
+            
             <button type="submit" text-align="center"><a href="Login.html">Sign Up</a></button>
         </form>
         <!-- <div id="errorMessage"></div>

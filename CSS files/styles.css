@@ -1,53 +1,133 @@
+/* Global styles */
 body {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(88, 187, 207);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    font-family:'Times New Roman', Times, serif;
+    background-image: url(/Image/bg1.png);
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
     height: 100vh;
     margin: 0;
+    background-size: cover; /* Ensures background covers entire screen */
+    background-position: center;
 }
 
-.navbar{
-    display: grid;
-    grid-area: header;
-    grid-column: span;
-    
+.container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
+.navi {
+    margin-left: auto;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+}
+
+.navi .nav-links {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+}
+
+.navi .nav-links li {
+    margin-left: 20px;
+}
+
+/* Link text styles */
+.navi .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hover effect for links */
+.navi .nav-links a:hover {
+    text-decoration: underline;
+}
+
+.content {
+    flex-grow: 1;
+    }
+.content section {
+    text-align: center;
+    display: none;
+    padding: 40px;
+    color:black;
+    background-position: center;
+    transition: transform 0.3s ease; 
+}
+/* .content section:hover{
+    border: 1px solid black;
+} */
+section:target {
+    display: block;
+    text-align: center;
+}
+a{
+    text-decoration: none;
+    color: black;
+    font-weight: normal;
+}
+h1{
+    text-align: center;
+    text-shadow: 4px 4px 4px #333;
+    text-decoration: dotted;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: column;
+    margin-left: 60%;
+}
+
+/* Navbar styles */
+.navbar img {
+        width: 20vw;
+}
+
+/* Login container styles */
 .login-container {
     background-color: #3472b5;
     height: auto;
     width: 90%;
+    margin-top: 20px;
     max-width: 400px;
-    padding: 5%;
+    /* padding: 5%; */
     border-radius: 5px;
-    box-shadow: 0 0 0 10px rgba(50, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(50, 0, 0, 0.1); /* Adjusted shadow for better visibility */
 }
 
 .login-container:hover {
     background-color: rgb(22, 108, 178);
 }
 
+/* Heading styles */
 h2 {
     font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 20px;
     text-align: center;
 }
 
+/* Label styles */
 label {
     display: block;
     margin: 10px 0 5px;
 }
 
+/* Input field styles */
 input {
     width: 100%;
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box;
 }
 
+/* Button styles */
 button {
     width: 100%;
     padding: 10px;
@@ -65,26 +145,60 @@ button:hover {
     background-color: #218838;
 }
 
+/* Error message styles */
 #errorMessage {
     color: red;
     margin-top: 10px;
 }
 
+/* Link styles */
 a {
     color: white;
 }
 
-/* Media Queries */
-@media (min-width: 768px) {
-    .login-container {
-        width: 50%;
-        padding: 3%;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 20px; /* Adding padding for smaller screens */
+    }
+
+
+    h2 {
+        font-size: 1.5rem; /* Adjust heading size on smaller screens */
+    }
+
+    button {
+        font-size: 14px; /* Slightly smaller buttons on small screens */
+    }
+    .navbar img{
+        display: grid;
+        width: 100vw;
+
+    }
+    .login-container{
+        width: 100vw;
+        height: 100vh;
+        padding-top: 50px;
+
     }
 }
 
-@media (min-width: 1024px) {
+@media (max-width: 480px) {
     .login-container {
-        width: 25%;
-        padding: 2%;
+        padding: 10%; /* Increase padding for extra small devices */
+        box-shadow: 0 0 5px rgba(50, 0, 0, 0.1); /* Soften the box-shadow */
+    }
+
+    h2 {
+        font-size: 1.2rem; /* Reduce heading size further */
+    }
+
+    input {
+        padding: 8px; /* Adjust input padding for smaller screens */
+    }
+
+    button {
+        padding: 8px; /* Adjust button padding */
+        font-size: 12px; /* Further reduce button font size */
     }
 }

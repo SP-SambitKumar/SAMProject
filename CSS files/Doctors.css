@@ -2,44 +2,70 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family:'Times New Roman', Times, serif
 }
 
 body {
-    font-family: Arial, sans-serif;
     color: #333;
     background-image: url("/Image/medical-healthcare-background-with-plus-signs_1017-26357.avif");
 }
+/* Navbar Styles */
 .navbar {
     background-color: #4CAF50;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
+/* Logo styles */
 .navbar .logo {
     font-size: 1.5rem;
     color: white;
     font-weight: bold;
 }
 
+/* Navigation link styles */
 .navbar .nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
 }
 
+/* Link item styles */
 .navbar .nav-links li {
     margin-left: 20px;
 }
 
+/* Link text styles */
 .navbar .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
 }
 
+/* Hover effect for links */
 .navbar .nav-links a:hover {
     text-decoration: underline;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the logo and links vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Make nav links take full width */
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add space between vertical items */
+    }
 }
 
 /* Hero Section */
@@ -50,6 +76,7 @@ body {
     color: white;
     text-align: center;
     padding: 4rem 2rem;
+    margin: 0;
     position: relative;
 }
 
@@ -66,11 +93,14 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
+    padding: 0;
+    margin: 0;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #333;
 }
 
 .hero p {
@@ -85,6 +115,10 @@ body {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+}
+
+.hero .cta-button:hover {
+    background-color: #45a049;
 }
 
 
@@ -115,7 +149,8 @@ td{
 
 .content {
     flex-grow: 1;
-    padding: 20px;
+    padding: 2px 2px 2px 2px;
+    background-color:beige;
     }
 .content section {
     text-align: center;
@@ -141,6 +176,14 @@ h1{
     text-align: center;
     text-shadow: 4px 4px 4px #333;
     text-decoration: dotted;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #333;
+    color: white;
+    margin-top: 2rem;
 }
 /* Smartphones (Portrait) */
 @media (max-width: 480px) {

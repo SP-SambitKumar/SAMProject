@@ -1,45 +1,71 @@
 body {
     /* <img src="example.jpg" alt="Example Image"> */
-    font-family: Arial, sans-serif;
-    padding: 20px;
+    font-family:'Times New Roman', Times, serif;
+    padding: 0;
     background-image: url("/Image/medical-healthcare-background-with-plus-signs_1017-26357.avif");
-
+    margin: 0;
 }
 
   /* Navbar Styles */
-.navbar {
+  .navbar {
     background-color: #4CAF50;
     padding: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
+/* Logo styles */
 .navbar .logo {
     font-size: 1.5rem;
     color: white;
     font-weight: bold;
 }
 
+/* Navigation link styles */
 .navbar .nav-links {
     list-style: none;
     display: flex;
+    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
 }
 
+/* Link item styles */
 .navbar .nav-links li {
     margin-left: 20px;
 }
 
+/* Link text styles */
 .navbar .nav-links a {
     color: white;
     text-decoration: none;
     font-size: 1rem;
 }
 
+/* Hover effect for links */
 .navbar .nav-links a:hover {
     text-decoration: underline;
 }
 
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column; /* Stack the logo and links vertically */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        width: 100%; /* Make nav links take full width */
+    }
+
+    .navbar .nav-links li {
+        margin-left: 0; /* Remove left margin */
+        margin-top: 10px; /* Add space between vertical items */
+    }
+}
+
+/* herosection styling */
 .hero {
     background: linear-gradient(to right, green, white, #2ac4d5);
     background-size: cover;
@@ -47,6 +73,7 @@ body {
     color: white;
     text-align: center;
     padding: 4rem 2rem;
+    margin: 0;
     position: relative;
 }
 
@@ -63,11 +90,14 @@ body {
 .hero-content {
     position: relative;
     z-index: 1;
+    padding: 0;
+    margin: 0;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px #333;
 }
 
 .hero p {
@@ -88,86 +118,78 @@ body {
     background-color: #45a049;
 }
 
-  form {
+/* form style */
+form {
     max-width: 300px;
     margin: 20px auto;
-    padding: 20px;
+    padding: 20px 20px;
     background: #45a049;
     border-radius: 10px;
-  }
-  
-  label {
+}
+label {
     display: block;
     margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  select,
-  input[type="date"],
-  input[type="time"],
-  button {
+}
+input[type="text"],
+input[type="email"],
+select,
+input[type="date"],
+input[type="time"],
+button {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-sizing: border-box;
-  }
-  
-  button {
+}
+button {
     background: #4caf50;
     color: white;
     border: none;
     cursor: pointer;
     width: 300px;
-  }
-  
-  button:hover {
+}  
+button:hover {
     background: #45a049;
     box-shadow: 2px 2px 2px green;
     border: 1px solid black;
-  }
-  
-  #confirmationMessage {
+}  
+#confirmationMessage {
     text-align: center;
     margin-top: 20px;
-  }
-  .booking-section h2 {
-      margin-bottom: 1.5rem;
-      color: #4CAF50;
-      text-align: center;
-  }
-  
-  .booking-form label {
-      display: block;
-      margin-bottom: 0.5rem;
-      font-weight: bold;
-  }
-  
-  .booking-form input,
-  .booking-form select {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 1rem;
-      border: 1px solid #ddd;
-      border-radius: 5px;
-      width: 290px;
-  }
-  
-  .booking-form button {
-      width: 100%;
-      padding: 0.75rem;
-      background-color: #4CAF50;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      font-size: 1rem;
-  }
-  
+}
+.booking-section h2 {
+    margin-bottom: 1.5rem;
+    color: #4CAF50;
+    text-align: center;
+  }  
+.booking-form label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}  
+.booking-form input,
+.booking-form select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    /* width: 290px; */
+}
+.booking-form button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+}
   .booking-form button:hover {
-      background-color: #45a049;
+    background-color: #45a049;
   }
 
   footer {
@@ -182,6 +204,8 @@ body {
 @media (max-width: 480px) {
   .navbar {
       flex-direction: column;
+      width: 100%;
+      text-align: center;
   }
 
   .nav-links {
@@ -190,11 +214,12 @@ body {
 
   .nav-links li {
       display: block;
-      margin: 10px 0;
+      text-align: center;
   }
 
   .hero {
       padding: 40px 20px;
+      max-width: max-content;
   }
 
   .hero h1 {

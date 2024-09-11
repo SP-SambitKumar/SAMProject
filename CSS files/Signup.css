@@ -1,50 +1,61 @@
+/* Global body styles */
 body {
-    font-family:  Georgia, 'Times New Roman', Times, serif;
-    background-color: rgb(88, 187, 207);
+    font-family:'Times New Roman', Times, serif;
+    background-image: url(/Image/signup.avif);
     display: flex;
     justify-content: center;
-    align-items:flex-start;
+    align-items: flex-start;
     height: 100vh;
     margin: 0;
     padding: 20px;
+    background-size: cover; /* Ensure background covers the whole screen */
+    background-position: center;
 }
 
+/* Signup container styles */
 .signup-container {
     background-color: #3472b5;
-    height: 90vh;
-    width: 30vw;
+    height: auto; /* Let the height adjust to the content */
+    width: 90%;
+    max-width: 400px; /* Limit the max width for larger screens */
     padding: 5%;
     border-radius: 5px;
-    box-shadow: 2px 2px 2px 10px rgba( 50, 0, 0.1);
-}
-.login-container:hover{
-    background-color:rgb(22, 108, 178);
-    
+    box-shadow: 2px 2px 10px rgba(50, 0, 0, 0.1); /* Fix the shadow styling */
+    margin-top: 20px; /* Add margin for better spacing on smaller screens */
 }
 
+.signup-container:hover {
+    background-color: rgb(22, 108, 178);
+}
+
+/* Heading styles */
 h2 {
-    font-family:  Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 20px;
     text-align: center;
 }
 
+/* Label styles */
 label {
     display: block;
     margin: 10px 0 5px;
 }
 
+/* Input field styles */
 input {
-    width: 30vw;
+    width: 100%; /* Full width for input fields */
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensures padding and borders don't affect width */
 }
 
+/* Button styles */
 button {
     width: 100%;
     padding: 10px;
-    margin-top: 90px;
+    margin-top: 20px; /* Reduced margin for smaller screens */
     background-color: #28a745;
     border: 2px solid black;
     border-radius: 5px;
@@ -59,55 +70,47 @@ button:hover {
     border: 2px solid #218838;
 }
 
-/* #errorMessage {
-    color: red;
-    margin-top: 10px;
-} */
-a{
+/* Anchor link styles */
+a {
     color: white;
 }
-/* Smartphones (Portrait) */
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .signup-container {
+        width: 100%; /* Full width for smaller devices */
+        padding: 8%; /* Increase padding for readability */
+        box-shadow: 2px 2px 5px rgba(50, 0, 0, 0.1); /* Soften shadow */
+    }
+
+    input {
+        padding: 8px; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        padding: 8px;
+        font-size: 14px; /* Slightly smaller font size for buttons */
+    }
+}
+
 @media (max-width: 480px) {
-    .navbar {
-        flex-direction: column;
+    body {
+        padding: 10px; /* Add padding for extra small devices */
     }
 
-    .nav-links {
-        text-align: center;
+    .signup-container {
+        padding: 10%; /* Increase padding for better spacing */
     }
 
-    .nav-links li {
-        display: block;
-        margin: 10px 0;
+    h2 {
+        font-size: 1.2rem; /* Reduce font size of heading */
     }
 
-    .hero {
-        padding: 40px 20px;
+    input {
+        padding: 6px; /* Smaller padding for inputs */
     }
 
-    .hero h1 {
-        font-size: 1.5em;
-    }
-
-    .hero p {
-        font-size: 0.9em;
-    }
-
-    .cta-button {
-        padding: 8px 16px;
-    }
-
-    .service-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 95%;
-    }
-
-    .categories {
-        flex-direction: column;
-        align-items: center;
+    button {
+        font-size: 12px; /* Smaller button font size */
     }
 }
