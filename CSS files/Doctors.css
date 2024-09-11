@@ -1,3 +1,14 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-image: url("/Image/medical-healthcare-background-with-plus-signs_1017-26357.avif");
+}
 .navbar {
     background-color: #4CAF50;
     padding: 1rem;
@@ -33,7 +44,7 @@
 
 /* Hero Section */
 .hero {
-    background-image: url('doctor-hero.jpg');
+    background: linear-gradient(to right, green, white, #2ac4d5);
     background-size: cover;
     background-position: center;
     color: white;

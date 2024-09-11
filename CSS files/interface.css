@@ -2,7 +2,9 @@ body {
     /* <img src="example.jpg" alt="Example Image"> */
     font-family: Arial, sans-serif;
     padding: 20px;
-  }
+    background-image: url("/Image/medical-healthcare-background-with-plus-signs_1017-26357.avif");
+
+}
 
   /* Navbar Styles */
 .navbar {
@@ -39,7 +41,7 @@ body {
 }
 
 .hero {
-    background-image: url('doctor-hero.jpg');
+    background: linear-gradient(to right, green, white, #2ac4d5);
     background-size: cover;
     background-position: center;
     color: white;
