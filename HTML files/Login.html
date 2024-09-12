@@ -10,11 +10,13 @@
     <link rel="stylesheet" href="../CSS files/styles.css">
 </head>
 <body>
+
+    <div class="navbar">
+        <img src="../Image/images-removebg-preview.png" alt="">
+</div>
     <div class="container">
         <div class="main">
-            <div class="navbar">
-                    <img src="../Image/images-removebg-preview.png" alt="">
-            </div>
+          
     <header>
     <div class="navi">
         <div class="nav-links">
@@ -30,49 +32,49 @@
 </header>
     
 
-    <div class="content">
-        <!-- <section> this section is for Admin</section> -->
+<div class="content">
+    <!-- <section> this section is for Admin</section> -->
 
-        <section id="doctor">
-            <div class="login-container">
-                <h2>Doctor's Log In</h2>
-                    <!-- Username: only alphabets are allowed -->
-                <label for="username">Username (Only alphnumeric) letters:</label>
-                <input type="text" id="username" name="username" placeholder="Enter username"
-                    pattern="[A-Za-z]+[0-9]+" title="Username should only contain alphnumeric letters" required>
-                
-                <!-- Password: must contain at least one letter and one number -->
-                <label for="password">Password (Letters and Numbers):</label>
-                <input type="password" id="password" name="password" placeholder="Enter password"
-                    pattern="(?=.[0-9])(?=.[a-zA-Z])[a-zA-Z0-9]+"
-                    title="Password must contain both letters and numbers" required>
-                
-                <div id="errorMessage"></div>
-                <button type="submit" text-align="center"><a href="/index.html">Log In</a></button>
-                <p>Do not have an Account <a href="Signup.html">Sign UP</a></p>
-            </div>
-        </section>
-        
-        <section id="patient">
-            <div class="login-container">
-                <h2>Patient's Log In</h2>
-                    <!-- Username: only alphabets are allowed -->
-                <label for="username">Username (Only alphnumeric) letters:</label>
-                <input type="text" id="username" name="username" placeholder="Enter username"
-                    pattern="[A-Za-z]+[0-9]+" title="Username should only contain alphnumeric letters" required>
-                
-                <!-- Password: must contain at least one letter and one number -->
-                <label for="password">Password (Letters and Numbers):</label>
-                <input type="password" id="password" name="password" placeholder="Enter password"
-                    pattern="/(?=.[0-9])(?=.[a-zA-Z])[a-zA-Z0-9]" 
-                    title="Password must contain both letters and numbers" required>
-                
-                <div id="errorMessage"></div>
-                <button type="submit" text-align="center"><a href="">Log In</a></button>
-                <p>Do not have an Account <a href="Signup.html">Sign UP</a></p>
-            </div>
-        </section>
-    </div>
+    <section id="doctor">
+        <div class="login-container">
+            <h2>Doctor's Log In</h2>
+                <!-- Username: only alphabets are allowed -->
+            <label for="username">Username (Only alphnumeric) letters:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username"
+                pattern="[A-Za-z]+[0-9]+" title="Username should only contain alphnumeric letters" required>
+            
+            <!-- Password: must contain at least one letter and one number -->
+            <label for="password">Password (Letters and Numbers):</label>
+            <input type="password" id="password" name="password" placeholder="Enter password"
+                pattern="(?=.[0-9])(?=.[a-zA-Z])[a-zA-Z0-9]+"
+                title="Password must contain both letters and numbers" required>
+            
+            <div id="errorMessage"></div>
+            <button type="submit" text-align="center"><a href="/index.html">Log In</a></button>
+            <p>Do not have an Account <a href="Signup.html">Sign UP</a></p>
+        </div>
+    </section>
+    
+    <section id="patient">
+        <div class="login-container">
+            <h2>Patient's Log In</h2>
+                <!-- Username: only alphabets are allowed -->
+            <label for="username">Username (Only alphnumeric) letters:</label>
+            <input type="text" id="username" name="username" placeholder="Enter username"
+                pattern="[A-Za-z]+[0-9]+" title="Username should only contain alphnumeric letters" required>
+            
+            <!-- Password: must contain at least one letter and one number -->
+            <label for="password">Password (Letters and Numbers):</label>
+            <input type="password" id="password" name="password" placeholder="Enter password"
+                pattern="/(?=.[0-9])(?=.[a-zA-Z])[a-zA-Z0-9]" 
+                title="Password must contain both letters and numbers" required>
+            
+            <div id="errorMessage"></div>
+            <button type="submit" text-align="center"><a href="">Log In</a></button>
+            <p>Do not have an Account <a href="Signup.html">Sign UP</a></p>
+        </div>
+    </section>
+</div>
     
     <!-- <script src="scripts.js"></script> -->
 </div>

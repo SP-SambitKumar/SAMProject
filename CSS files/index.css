@@ -22,6 +22,8 @@ body {
     flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 }
 
+
+
 /* Logo styles */
 .navbar .logo {
     font-size: 1.5rem;

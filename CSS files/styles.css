@@ -1,103 +1,86 @@
 /* Global styles */
 body {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Times New Roman', Times, serif;
     background-image: url(/Image/bg1.png);
-    /* display: flex; */
-    /* justify-content: center;
-    align-items: center; */
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     height: 100vh;
     margin: 0;
-    background-size: cover; /* Ensures background covers entire screen */
-    background-position: center;
 }
 
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
 }
 
-.navi {
-    margin-left: auto;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
-}
-
-.navi .nav-links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
-}
-
-.navi .nav-links li {
-    margin-left: 20px;
-}
-
-/* Link text styles */
-.navi .nav-links a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-}
-
-/* Hover effect for links */
-.navi .nav-links a:hover {
-    text-decoration: underline;
-}
-
 .content {
     flex-grow: 1;
-    }
+}
+
 .content section {
     text-align: center;
     display: none;
     padding: 40px;
-    color:black;
+    color: black;
     background-position: center;
-    transition: transform 0.3s ease; 
+    transition: transform 0.3s ease;
 }
-/* .content section:hover{
-    border: 1px solid black;
-} */
+
 section:target {
     display: block;
     text-align: center;
 }
-a{
+
+a {
     text-decoration: none;
     color: black;
     font-weight: normal;
 }
-h1{
+
+h1 {
     text-align: center;
     text-shadow: 4px 4px 4px #333;
     text-decoration: dotted;
 }
 
-
-.main{
+.main {
     display: flex;
     flex-direction: column;
-    margin-left: 60%;
 }
 
 /* Navbar styles */
 .navbar img {
-        width: 20vw;
+    margin-left: auto;
+    width: 20vw;
+    max-width: 150px; /* Adjust for smaller screens */
+}
+
+/* Responsive Login container */
+#doctor {
+    position: absolute;
+    left: 0; /* Align to the left of the entire page */
+    top: 200px; /* Adjust this to control the vertical position */
+}
+
+#patient {
+    position: absolute;
+    left: 0;
+    top: 200px;
 }
 
 /* Login container styles */
 .login-container {
     background-color: #3472b5;
     height: auto;
-    width: 90%;
     margin-top: 20px;
+    width: 100vw;
     max-width: 400px;
-    /* padding: 5%; */
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(50, 0, 0, 0.1); /* Adjusted shadow for better visibility */
+    margin-left: 1000px; /* Ensures the container is aligned to the left */
+    box-shadow: 0 0 10px rgba(50, 0, 0, 0.1);
+    position: absolute;
+    left: 0;
 }
 
 .login-container:hover {
@@ -157,48 +140,57 @@ a {
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+    .login-container {
+        margin-left: 50%; /* Make sure it's more centered on larger tablets */
+    }
+}
+
 @media (max-width: 768px) {
-    body {
-        padding: 20px; /* Adding padding for smaller screens */
-    }
-
-
-    h2 {
-        font-size: 1.5rem; /* Adjust heading size on smaller screens */
-    }
-
-    button {
-        font-size: 14px; /* Slightly smaller buttons on small screens */
-    }
-    .navbar img{
-        display: grid;
+    .login-container {
+        margin-left: 0; /* Ensure alignment on smaller tablets */
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 0 5px rgba(50, 0, 0, 0.1);
         width: 100vw;
-
+        max-width: 400px;
     }
-    .login-container{
-        width: 100vw;
-        height: 100vh;
-        padding-top: 50px;
 
+    .navbar img {
+        width: 15vw; /* Adjust navbar logo size */
     }
+
+    
+/* Responsive Login container */
+#doctor {
+    position: absolute;
+    left: 0; /* Align to the left of the entire page */
+    top: 200px; /* Adjust this to control the vertical position */
+}
+
+#patient {
+    position: absolute;
+    left: 0;
+    top: 200px;
+}
 }
 
 @media (max-width: 480px) {
     .login-container {
-        padding: 10%; /* Increase padding for extra small devices */
-        box-shadow: 0 0 5px rgba(50, 0, 0, 0.1); /* Soften the box-shadow */
+        padding: 10%;
+        box-shadow: 0 0 5px rgba(50, 0, 0, 0.1);
     }
 
     h2 {
-        font-size: 1.2rem; /* Reduce heading size further */
+        font-size: 1.2rem;
     }
 
     input {
-        padding: 8px; /* Adjust input padding for smaller screens */
+        padding: 8px;
     }
 
     button {
-        padding: 8px; /* Adjust button padding */
-        font-size: 12px; /* Further reduce button font size */
+        padding: 8px;
+        font-size: 12px;
     }
 }
