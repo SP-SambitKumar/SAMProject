@@ -3,7 +3,7 @@ body {
     background-image: url(../Image/medical.jpg);
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     margin: 0;
     padding: 0;
   }
