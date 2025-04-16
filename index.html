@@ -11,20 +11,36 @@
 <body>
     <!-- Navigation Bar -->
     <header>
-        <nav class="navbar">
-            <div class="logo">Online Doctor Appointment Booking </div>
-            <ul class="nav-links">
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/HTML files/Doctors.html">Doctors</a></li>
-                <li><a href="#">Appointments</a></li>
-                <li><a href="/HTML files/contact.html">Contact Us</a></li>
-                <li><a href="/HTML files/Login.html"><button>Log In</button></a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Online Doctor Appointment Booking</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="/index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/HTML files/Doctors.html">Doctors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Appointments</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/HTML files/contact.html">Contact Us</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/HTML files/Login.html">
+                                <button class="btn btn-success">Log In</button>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-
-
-
 
     <!-- Hero Section -->
     <section class="hero">
@@ -56,7 +72,8 @@
             </div>
         </div>
     </section>
-    <!-- category section -->
+
+    <!-- Category Section -->
     <div class="categories">
         <div class="category">
             <img src="../Image/dermatology_icon.png" alt="Dermatology">
@@ -71,6 +88,7 @@
             <p>Coronavirus</p>
         </div>
     </div>
+
     <!-- Footer Section -->
     <footer>
         <p>&copy; 2024 DoctorApp. All rights reserved.</p>

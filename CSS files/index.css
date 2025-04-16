@@ -13,64 +13,64 @@ body {
 }
 
 /* Navbar Styles */
+/* General Navbar Styling */
 .navbar {
-    background-color: #4CAF50;
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    background-color: #f8f9fa;
 }
 
-
-
-/* Logo styles */
-.navbar .logo {
+.navbar .navbar-brand {
     font-size: 1.5rem;
-    color: white;
     font-weight: bold;
 }
 
-/* Navigation link styles */
-.navbar .nav-links {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap; /* Ensure links wrap on smaller screens */
+.navbar-nav .nav-item .nav-link {
+    font-size: 1.2rem;
+    margin-right: 15px;
+    transition: color 0.3s ease;
 }
 
-/* Link item styles */
-.navbar .nav-links li {
-    margin-left: 20px;
+.navbar-nav .nav-item .nav-link:hover {
+    color: #509f42;
 }
 
-/* Link text styles */
-.navbar .nav-links a {
-    color: white;
-    text-decoration: none;
+.btn-success {
+    background-color: #509f42;
+    border: none;
     font-size: 1rem;
 }
 
-/* Hover effect for links */
-.navbar .nav-links a:hover {
-    text-decoration: underline;
+/* Make the navbar toggle appear when the screen is smaller */
+@media (max-width: 992px) {
+    .navbar-nav {
+        text-align: center;
+    }
+    .navbar-toggler {
+        outline: none;
+        border: none;
+    }
 }
 
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-    .navbar {
-        flex-direction: column; /* Stack the logo and links vertically */
-        align-items: flex-start; /* Align items to the start */
-    }
+/* Hero Section Customization */
+.hero {
+    text-align: center;
+    padding: 50px 0;
+}
 
-    .navbar .nav-links {
-        flex-direction: column; /* Stack links vertically */
-        width: 100%; /* Make nav links take full width */
-    }
+.hero h1 {
+    font-size: 3rem;
+    color: #509f42;
+}
 
-    .navbar .nav-links li {
-        margin-left: 0; /* Remove left margin */
-        margin-top: 10px; /* Add space between vertical items */
-    }
+.hero p {
+    font-size: 1.5rem;
+}
+
+.cta-button {
+    background-color: #509f42;
+    padding: 10px 20px;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
 }
 
 
